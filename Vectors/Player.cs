@@ -53,7 +53,12 @@ namespace Vectors
 
             }
 
+            if(Raylib.IsKeyPressed(KeyboardKey.KEY_F))
+            {
+                float dotted = direction.Dot(Program.enemy.direction);
 
+                Console.WriteLine(dotted);
+            }
         }
     }
 }

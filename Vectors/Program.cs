@@ -5,8 +5,11 @@ using MathsLibrary;
 
 public class Program
 {
+    public static Enemy enemy = new Enemy();
     public static int Main()
     {
+
+
         //Initialize - Load things
         const int screenW = 800;
         const int screenH = 450;
@@ -16,8 +19,12 @@ public class Program
 
         List<GameObject> gameObjects = new List<GameObject>();
         gameObjects.Add(new GameObject());
-        gameObjects.Add(new Person());
-        //gameObjects.Add(new Player());
+        gameObjects.Add(new Player());
+        gameObjects.Add(enemy);
+
+        enemy.position = new Vector3(356, 67, 0);
+        enemy.direction = new Vector3(1, 0, 0);
+
 
         Ball ball = new Ball();
         ball.velocity = new Vector3(15, 30, 0);
@@ -34,7 +41,7 @@ public class Program
             //Draw
             Raylib.BeginDrawing();
 
-            Raylib.ClearBackground(Color.RAYWHITE);
+            Raylib.ClearBackground(Raylib_cs.Color.RAYWHITE);
 
             foreach (GameObject gamObj in gameObjects)
             {

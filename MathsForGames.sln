@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathsFormulas", "MathsFormu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trigonometry", "Trigonometry\Trigonometry.csproj", "{187A2613-9F1F-4933-BF42-3E2A7551EC4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathsLibrary", "MathsLibrary\MathsLibrary.csproj", "{F0C610BD-2CCB-4D41-99CC-91230B844BE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathsLibrary", "MathsLibrary\MathsLibrary.csproj", "{F0C610BD-2CCB-4D41-99CC-91230B844BE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectors", "Vectors\Vectors.csproj", "{C53806C6-0708-41D9-958F-DA6F056E8B14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vectors", "Vectors\Vectors.csproj", "{C53806C6-0708-41D9-958F-DA6F056E8B14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMathsLibrary", "TestMathsLibrary\TestMathsLibrary.csproj", "{F2607488-90DF-43E6-9970-4BB358F3765B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{7792A6FB-C9B8-439B-B489-881F3D6C95DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{C53806C6-0708-41D9-958F-DA6F056E8B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C53806C6-0708-41D9-958F-DA6F056E8B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C53806C6-0708-41D9-958F-DA6F056E8B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2607488-90DF-43E6-9970-4BB358F3765B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2607488-90DF-43E6-9970-4BB358F3765B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2607488-90DF-43E6-9970-4BB358F3765B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2607488-90DF-43E6-9970-4BB358F3765B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7792A6FB-C9B8-439B-B489-881F3D6C95DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7792A6FB-C9B8-439B-B489-881F3D6C95DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7792A6FB-C9B8-439B-B489-881F3D6C95DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7792A6FB-C9B8-439B-B489-881F3D6C95DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

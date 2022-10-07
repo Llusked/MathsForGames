@@ -10,7 +10,7 @@ using MathsLibrary;
 
 namespace Vectors
 {
-    public class Person: GameObject
+    public class Enemy: GameObject
     {
         public Vector3 vector1;
         public Vector3 vector2;
