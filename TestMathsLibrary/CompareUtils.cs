@@ -44,7 +44,7 @@ namespace UnitTestProject
             return true;
         }
 
-        /*public static bool compare(Matrix4 a, Matrix4 b, float tolerance = DEFAULT_TOLERANCE)
+        public static bool compare(Matrix4 a, Matrix4 b, float tolerance = DEFAULT_TOLERANCE)
         {
             if (Math.Abs(a.m1 - b.m1) > tolerance || Math.Abs(a.m2 - b.m2) > tolerance || Math.Abs(a.m3 - b.m3) > tolerance || Math.Abs(a.m4 - b.m4) > tolerance ||
                 Math.Abs(a.m5 - b.m5) > tolerance || Math.Abs(a.m6 - b.m6) > tolerance || Math.Abs(a.m7 - b.m7) > tolerance || Math.Abs(a.m8 - b.m8) > tolerance ||
@@ -52,6 +52,6 @@ namespace UnitTestProject
                 Math.Abs(a.m13 - b.m13) > tolerance || Math.Abs(a.m14 - b.m14) > tolerance || Math.Abs(a.m15 - b.m15) > tolerance || Math.Abs(a.m16 - b.m16) > tolerance)
                 return false;
             return true;
-        }*/
+        }
     }
 }

@@ -82,14 +82,14 @@ namespace MathsLibrary
 
         }
 
-        public static Vector3 operator *(Vector3 lhs, float rhs)
+        public static Vector3 operator *(Vector3 lhs, float scalar)
         {
-            return new Vector3(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs);
+            return new Vector3(lhs.x * scalar, lhs.y * scalar, lhs.z * scalar);
         }
 
-        public static Vector3 operator *(float lhs, Vector3 rhs)
+        public static Vector3 operator *(float scalar, Vector3 rhs)
         {
-            return new Vector3(lhs * rhs.x, lhs * rhs.y, lhs * rhs.z);
+            return new Vector3(scalar * rhs.x, scalar * rhs.y, scalar * rhs.z);
         }
 
         public static Vector3 operator /(Vector3 lhs, float rhs)
@@ -131,13 +131,13 @@ namespace MathsLibrary
             hash.Add(y);
             hash.Add(z);
 
-            return base.GetHashCode();
+            return hash.GetHashCode();
         }
 
         public override string ToString()
-       {
-            return x.ToString(); y.ToString(); z.ToString();
-       }
+        {
+            return x.ToString() + "," + y.ToString() + "," + z.ToString();
+        }
 
     }
 }

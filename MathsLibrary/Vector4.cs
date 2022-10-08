@@ -87,14 +87,14 @@ namespace MathsLibrary
         }
 
 
-        public static Vector4 operator *(Vector4 lhs, float rhs)
+        public static Vector4 operator *(Vector4 lhs, float scalar)
         {
-            return new Vector4(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs, lhs.w * rhs);
+            return new Vector4(lhs.x * scalar, lhs.y * scalar, lhs.z * scalar, lhs.w * scalar);
         }
 
-        public static Vector4 operator *(float lhs, Vector4 rhs)
+        public static Vector4 operator *(float scalar, Vector4 rhs)
         {
-            return new Vector4(lhs * rhs.x, lhs * rhs.y, lhs * rhs.z, lhs * rhs.w);
+            return new Vector4(scalar * rhs.x, scalar * rhs.y, scalar * rhs.z, scalar * rhs.w);
         }
 
         public static Vector4 operator /(Vector4 lhs, float rhs)
@@ -143,7 +143,7 @@ namespace MathsLibrary
 
         public override string ToString()
         {
-            return x.ToString(); y.ToString(); z.ToString(); w.ToString();
+            return x.ToString() + "," + y.ToString() + "," + z.ToString() + "," + w.ToString();
         }
 
 

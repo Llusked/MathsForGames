@@ -83,122 +83,173 @@ namespace MathsLibrary
         public static Matrix3 CreateTransation(float x, float y)
         {
 
-            //Matrix3 mat = Identity;
+            Matrix3 mat = Identity;
 
-            //mat.m7 = x;
-            //mat.m8 = y;
+            mat.m7 = x;
+            mat.m8 = y;
 
-            //return mat;
+            return mat;
 
-            Matrix3 m = new Matrix3();
-            m.m1 = 1; m.m4 = 0; m.m7 = x;
-            m.m2 = 0; m.m5 = 1; m.m8 = y;
-            m.m3 = 0; m.m6 = 0; m.m9 = 1;
+            //Matrix3 m = new Matrix3();
+            //m.m1 = 1; m.m4 = 0; m.m7 = x;
+            //m.m2 = 0; m.m5 = 1; m.m8 = y;
+            //m.m3 = 0; m.m6 = 0; m.m9 = 1;
 
-            return m;
+            //return m;
         }
 
         public static Matrix3 CreateTranslation(Vector3 vec)
         {
-            Matrix3 m = new Matrix3();
-            m.m1 = 1; m.m4 = 0; m.m7 = vec.x;
-            m.m2 = 0; m.m5 = 1; m.m8 = vec.y;
-            m.m3 = 0; m.m6 = 0; m.m9 = vec.z;
 
-            return m;
+            Matrix3 mat = Identity;
+
+            mat.m7 = vec.x;
+            mat.m8 = vec.y;
+            mat.m9 = vec.z;
+
+            return mat;
+
+            //Matrix3 m = new Matrix3();
+            //m.m1 = 1; m.m4 = 0; m.m7 = vec.x;
+            //m.m2 = 0; m.m5 = 1; m.m8 = vec.y;
+            //m.m3 = 0; m.m6 = 0; m.m9 = vec.z;
+
+            //return m;
         }
 
         public static Matrix3 CreateRotateX(float a)
         {
 
-            //return new Matrix3(
-                
-            //    1,
-            //    0,
-            //    0,
-                 
-            //    0,
-            //    MathF.Cos(a),
-            //    MathF.Sin(a),
-                
-            //    0,
-            //    -MathF.Sin(a),
-            //     MathF.Cos(a)
-            //    );
+            return new Matrix3(
 
-            Matrix3 m = new Matrix3();
-            m.m1 = 1; m.m4 = 0; m.m7 = 0;
-            m.m2 = 0; m.m5 = (float)MathF.Cos(a); m.m8 = (float)MathF.Sin(a);
-            m.m3 = 0; m.m6 = (float)(-MathF.Sin(a)); m.m9 = (float)MathF.Cos(a);
-            return m;
+                1,
+                0,
+                0,
+
+                0,
+                MathF.Cos(a),
+                -MathF.Sin(a),
+
+                0,
+                MathF.Sin(a),
+                 MathF.Cos(a)
+                ) ;
+
+            //Matrix3 m = new Matrix3();
+            //m.m1 = 1; m.m4 = 0; m.m7 = 0;
+            //m.m2 = 0; m.m5 = (float)MathF.Cos(a); m.m8 = (float)MathF.Sin(a);
+            //m.m3 = 0; m.m6 = (float)(-MathF.Sin(a)); m.m9 = (float)MathF.Cos(a);
+            //return m;
         }
 
         public static Matrix3 CreateRotateY(float a)
         {
-            Matrix3 m = new Matrix3();
-            m.m1 = (float)MathF.Cos(a); m.m4 = 0; m.m7 = (float)(-MathF.Sin(a));
-            m.m2 = 0; m.m5 = 1; m.m8 = 0;
-            m.m3 = (float)MathF.Sin(a); m.m6 = 0; m.m9 = (float)MathF.Cos(a);
-            return m;
+            return new Matrix3(
+
+                MathF.Cos(a),
+                0,
+                MathF.Sin(a),
+
+                0,
+                1,
+                0,
+
+                -MathF.Sin(a),
+                0,
+                MathF.Cos(a)
+                );
+
+            //Matrix3 m = new Matrix3();
+            //m.m1 = (float)MathF.Cos(a); m.m4 = 0; m.m7 = (float)(-MathF.Sin(a));
+            //m.m2 = 0; m.m5 = 1; m.m8 = 0;
+            //m.m3 = (float)MathF.Sin(a); m.m6 = 0; m.m9 = (float)MathF.Cos(a);
+            //return m;
         }
 
         public static Matrix3 CreateRotateZ(float a)
         {
-            Matrix3 m = new Matrix3();
-            m.m1 = (float)Math.Cos(a); m.m4 = (float)Math.Sin(a); m.m7 =0;
-            m.m2 = (float)(-Math.Sin(a)); m.m5 = (float)Math.Cos(a); m.m8 =0;
-            m.m3 = 0; m.m6 = 0; m.m9 = 1;
-            return m;
+
+            return new Matrix3(
+
+                MathF.Cos(a),
+                -MathF.Sin(a),
+                0,
+
+                MathF.Sin(a),
+                MathF.Cos(a),
+                0,
+
+                0,
+                0,
+                1
+                );
+
+            //Matrix3 m = new Matrix3();
+            //m.m1 = (float)Math.Cos(a); m.m4 = (float)Math.Sin(a); m.m7 =0;
+            //m.m2 = (float)(-Math.Sin(a)); m.m5 = (float)Math.Cos(a); m.m8 =0;
+            //m.m3 = 0; m.m6 = 0; m.m9 = 1;
+            //return m;
         }
 
         public static Matrix3 Euler(float pitch, float yaw, float roll)
         {
-            return new Matrix3();
+            Matrix3 mat = Identity;
+
+            mat.m7 = pitch;
+            mat.m8 = yaw;
+            mat.m9 = roll;
+
+            return mat;
+
         }
 
         public static Matrix3 CreateScale(float xScale, float yScale)
         {
 
-            //Matrix3 mat = Identity;
+            Matrix3 mat = Identity;
 
-            //mat.m1 = xScale;
-            //mat.m4 = yScale;
+            mat.m1 = xScale;
+            mat.m4 = yScale;
 
-            //return mat;
+            return mat;
 
-            Matrix3 m = new Matrix3();
-            m.m1 = xScale; m.m4 = 0; m.m7 = 0;
-            m.m2 = 0; m.m5 = yScale; m.m8 = 0;
-            m.m3 = 0; m.m6 = 0; m.m9 = 1;
-            return m;
+            //Matrix3 m = new Matrix3();
+            //m.m1 = xScale; m.m4 = 0; m.m7 = 0;
+            //m.m2 = 0; m.m5 = yScale; m.m8 = 0;
+            //m.m3 = 0; m.m6 = 0; m.m9 = 1;
+            //return m;
         }
         public static Matrix3 CreateScale(float xScale, float yScale, float zScale)
         {
 
-            //Matrix3 mat = Identity;
-            //mat.m1 = xScale;
-            //mat.m4 = yScale;
-            //mat.m9 = zScale;
+            Matrix3 mat = Identity;
+            mat.m1 = xScale;
+            mat.m4 = yScale;
+            mat.m9 = zScale;
 
-            //return mat;
+            return mat;
 
-            Matrix3 m = new Matrix3();
-            m.m1 = xScale; m.m4 = 0; m.m7 = 0;
-            m.m2 = 0; m.m4 = yScale; m.m8 = 0;
-            m.m3 = 0; m.m5 = 0; m.m9 = xScale;
-            return m;
+            //Matrix3 m = new Matrix3();
+            //m.m1 = xScale; m.m4 = 0; m.m7 = 0;
+            //m.m2 = 0; m.m4 = yScale; m.m8 = 0;
+            //m.m3 = 0; m.m5 = 0; m.m9 = xScale;
+            //return m;
 
         }
         public static Matrix3 CreateScale(Vector3 scale)
         {
 
+            Matrix3 mat = Identity;
+            mat.m1 = scale.x;
+            mat.m4 = scale.y;
+            mat.m9 = scale.z;
+            return mat;
 
-
-            Matrix3 m = new Matrix3();
-            m.m1 = scale.x; m.m4 = 0; m.m7 = 0;
-            m.m2 = 0; m.m4 = scale.y; m.m8 = 0;
-            m.m3 = 0; m.m5 = 0; m.m9 = scale.z;
-            return m;
+            //Matrix3 m = new Matrix3();
+            //m.m1 = scale.x; m.m4 = 0; m.m7 = 0;
+            //m.m2 = 0; m.m4 = scale.y; m.m8 = 0;
+            //m.m3 = 0; m.m5 = 0; m.m9 = scale.z;
+            //return m;
         }
 
         public void SetTranslation(float x, float y)
@@ -209,7 +260,8 @@ namespace MathsLibrary
 
         public void Translate(float x, float y)
         {
-
+            this.m1 += x;
+            this.m4 += y;
         }
 
         public Vector3 GetTranslation()
@@ -238,14 +290,18 @@ namespace MathsLibrary
     // scales the existing matrix by a certain amount on each axis
         public void Scale(float x, float y, float z)
         {
-
+            m1 *= x;
+            m4 *= y;
+            m9 *= z;
         }
     
 
     // scales the existing matrix by a certain amount on each axis
         public void Scale(Vector3 v)
         {
-
+            m1 *= v.x;
+            m4 *= v.y;
+            m9 *= v.z;
         }
 
         public bool Equals(Matrix3 other)
@@ -289,7 +345,7 @@ namespace MathsLibrary
 
         public override string ToString()
         {
-            return m1.ToString(); m2.ToString(); m3.ToString(); m4.ToString(); m5.ToString(); m6.ToString(); m7.ToString(); m8.ToString(); m9.ToString();
+            return m1.ToString() + "," + m2.ToString() + "," + m3.ToString() + "," + m4.ToString() + "," + m5.ToString() + "," + m6.ToString() + "," + m7.ToString() + m8.ToString() + "," + m9.ToString();
         }
 
         public float this[int index]

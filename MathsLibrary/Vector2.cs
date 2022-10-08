@@ -64,25 +64,58 @@ namespace MathsLibrary
             return new Vector2(-rhs.x, -rhs.y);
         }
 
-        public static bool operator ==(Vector2 lhs, Vector2 rhs)
+        public static Vector2 operator *(Vector2 lhs, float scalar)
         {
-            if (MathF.Abs(lhs.x - rhs.x) < float.Epsilon && MathF.Abs(lhs.y - rhs.y) < float.Epsilon)
+            return new Vector2(lhs.x * scalar, lhs.y * scalar);
+        }
+
+
+        public static Vector2 operator *(float scalar, Vector2 rhs)
+        {
+            return new Vector2(scalar * rhs.x, scalar * rhs.y);
+        }
+
+        public static Vector2 operator /(Vector2 lhs, float rhs)
+        {
+            return new Vector2(lhs.x / rhs, lhs.y / rhs);
+        }
+
+        public bool Equals(Vector2 other)
+        {
+            if (MathF.Abs(x - other.x) < 0.0001 && 
+                MathF.Abs(y - other.y) < 0.0001)
             {
                 return true;
             }
             return false;
         }
+        public override bool Equals(object? obj)
+        {
+            return obj != null && this.Equals((Vector2)obj);
+        }
+
+        public static bool operator ==(Vector2 lhs, Vector2 rhs)
+        {
+            return lhs.Equals(rhs);
+        }
         public static bool operator !=(Vector2 lhs, Vector2 rhs)
         {
             return !(lhs == rhs);
         }
+        public override int GetHashCode()
+        {
+            HashCode hash = new HashCode();
+
+            hash.Add(x);
+            hash.Add(y);
+
+            return hash.GetHashCode();
+        }
 
         public override string ToString()
         {
-            return x.ToString(); y.ToString();
+            return x.ToString() + "," + y.ToString();
         }
-
-
     }
 
 }

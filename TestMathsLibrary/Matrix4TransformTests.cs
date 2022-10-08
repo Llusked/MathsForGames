@@ -9,7 +9,7 @@ namespace UnitTestProject
     public class Matrix4TransformTests
     {
         [TestMethod]
-        /*public void Matrix4SetRotateX()
+        public void Matrix4SetRotateX()
         {
             Matrix4 m4a = Matrix4.CreateRotateX(4.5f);
 
@@ -97,6 +97,6 @@ namespace UnitTestProject
 
             Assert.AreEqual(v4b,
                 new Vector4(-21.6527443f, -45.16128f, 862, 0));
-        }*/
+        }
     }
 }
